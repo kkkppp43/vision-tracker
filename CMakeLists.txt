@@ -24,3 +24,13 @@ target_include_directories(tracking PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include"
 
 add_executable(tracker src/main.cpp include/test_frames.hpp)
 target_link_libraries(tracker PRIVATE tracking)
+
+include(CTest)
+if(BUILD_TESTING)
+  add_executable(tracker_tests tests/tracker_tests.cpp)
+  target_link_libraries(tracker_tests PRIVATE tracking)
+  add_test(NAME provided_frames COMMAND tracker_tests provided_frames)
+  add_test(NAME rejection_atomicity COMMAND tracker_tests rejection)
+  add_test(NAME variable_time_and_reacquisition COMMAND tracker_tests variable_time)
+  add_test(NAME empty_first_frame COMMAND tracker_tests empty_first)
+endif()
