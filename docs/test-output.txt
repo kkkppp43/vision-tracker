@@ -1,0 +1,134 @@
+frame=0 accepted=true
+tracking_target_count=2 lost_target_count=0 armor_target_count=1 spinning_target_count=1
+id=1 type=0 status=1 position=(1.00,2.00) velocity=(0.00,0.00) predicted_position=(1.00,2.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
+id=2 type=1 status=1 position=(5.00,0.00) velocity=(0.00,0.00) predicted_position=(5.00,0.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
+frame=1 accepted=true
+tracking_target_count=2 lost_target_count=0 armor_target_count=1 spinning_target_count=1
+id=1 type=0 status=1 position=(2.00,2.00) velocity=(10.00,0.00) predicted_position=(3.00,2.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
+id=2 type=1 status=1 position=(5.00,0.00) velocity=(0.00,0.00) predicted_position=(5.00,0.00) angle=0.20 angular_velocity=2.00 predicted_angle=0.40 missed=0
+frame=2 accepted=true
+tracking_target_count=2 lost_target_count=0 armor_target_count=1 spinning_target_count=1
+id=1 type=0 status=1 position=(3.00,2.00) velocity=(10.00,0.00) predicted_position=(4.00,2.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
+id=2 type=1 status=1 position=(5.00,0.00) velocity=(0.00,0.00) predicted_position=(5.00,0.00) angle=0.40 angular_velocity=2.00 predicted_angle=0.60 missed=1
+frame=3 accepted=true
+tracking_target_count=2 lost_target_count=0 armor_target_count=1 spinning_target_count=1
+id=1 type=0 status=1 position=(4.00,2.00) velocity=(10.00,0.00) predicted_position=(5.00,2.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
+id=2 type=1 status=1 position=(5.00,0.00) velocity=(0.00,0.00) predicted_position=(5.00,0.00) angle=0.60 angular_velocity=2.00 predicted_angle=0.80 missed=2
+frame=4 accepted=true
+tracking_target_count=2 lost_target_count=0 armor_target_count=1 spinning_target_count=1
+id=1 type=0 status=1 position=(4.00,2.00) velocity=(10.00,0.00) predicted_position=(6.00,2.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=1
+id=2 type=1 status=1 position=(5.00,0.00) velocity=(0.00,0.00) predicted_position=(5.00,0.00) angle=0.80 angular_velocity=2.00 predicted_angle=1.00 missed=3
+frame=5 accepted=true
+tracking_target_count=2 lost_target_count=0 armor_target_count=1 spinning_target_count=1
+id=1 type=0 status=1 position=(4.00,2.00) velocity=(10.00,0.00) predicted_position=(7.00,2.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=2
+id=2 type=1 status=1 position=(5.00,0.00) velocity=(0.00,0.00) predicted_position=(5.00,0.00) angle=1.00 angular_velocity=2.00 predicted_angle=1.20 missed=4
+frame=6 accepted=true
+tracking_target_count=1 lost_target_count=1 armor_target_count=1 spinning_target_count=1
+id=1 type=0 status=1 position=(5.00,2.00) velocity=(3.33,0.00) predicted_position=(5.33,2.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
+id=2 type=1 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=5
+frame=7 accepted=true
+tracking_target_count=1 lost_target_count=1 armor_target_count=1 spinning_target_count=1
+id=1 type=0 status=1 position=(5.00,2.00) velocity=(3.33,0.00) predicted_position=(5.67,2.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=1
+id=2 type=1 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=5
+frame=8 accepted=true
+tracking_target_count=1 lost_target_count=1 armor_target_count=1 spinning_target_count=1
+id=1 type=0 status=1 position=(5.00,2.00) velocity=(3.33,0.00) predicted_position=(6.00,2.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=2
+id=2 type=1 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=5
+frame=9 accepted=true
+tracking_target_count=1 lost_target_count=1 armor_target_count=1 spinning_target_count=1
+id=1 type=0 status=1 position=(6.00,2.00) velocity=(3.33,0.00) predicted_position=(6.33,2.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
+id=2 type=1 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=5
+frame=10 accepted=true
+tracking_target_count=1 lost_target_count=1 armor_target_count=1 spinning_target_count=1
+id=1 type=0 status=1 position=(6.00,2.00) velocity=(3.33,0.00) predicted_position=(6.67,2.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=1
+id=2 type=1 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=5
+frame=11 accepted=true
+tracking_target_count=1 lost_target_count=1 armor_target_count=1 spinning_target_count=1
+id=1 type=0 status=1 position=(6.00,2.00) velocity=(3.33,0.00) predicted_position=(7.00,2.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=2
+id=2 type=1 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=5
+frame=12 accepted=true
+tracking_target_count=0 lost_target_count=2 armor_target_count=1 spinning_target_count=1
+id=1 type=0 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=3
+id=2 type=1 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=5
+frame=13 accepted=true
+tracking_target_count=1 lost_target_count=1 armor_target_count=1 spinning_target_count=1
+id=1 type=0 status=1 position=(7.00,2.00) velocity=(0.00,0.00) predicted_position=(7.00,2.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
+id=2 type=1 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=5
+frame=14 accepted=true
+tracking_target_count=2 lost_target_count=1 armor_target_count=2 spinning_target_count=1
+id=1 type=0 status=1 position=(7.00,2.00) velocity=(0.00,0.00) predicted_position=(7.00,2.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=1
+id=2 type=1 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=5
+id=3 type=0 status=1 position=(1.00,1.00) velocity=(0.00,0.00) predicted_position=(1.00,1.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
+frame=15 accepted=true
+tracking_target_count=2 lost_target_count=1 armor_target_count=2 spinning_target_count=1
+id=1 type=0 status=1 position=(8.00,2.00) velocity=(5.00,0.00) predicted_position=(8.50,2.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
+id=2 type=1 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=5
+id=3 type=0 status=1 position=(2.00,1.00) velocity=(10.00,0.00) predicted_position=(3.00,1.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
+frame=16 accepted=false
+tracking_target_count=2 lost_target_count=1 armor_target_count=2 spinning_target_count=1
+id=1 type=0 status=1 position=(8.00,2.00) velocity=(5.00,0.00) predicted_position=(8.50,2.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
+id=2 type=1 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=5
+id=3 type=0 status=1 position=(2.00,1.00) velocity=(10.00,0.00) predicted_position=(3.00,1.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
+frame=19 accepted=false
+tracking_target_count=2 lost_target_count=1 armor_target_count=2 spinning_target_count=1
+id=1 type=0 status=1 position=(8.00,2.00) velocity=(5.00,0.00) predicted_position=(8.50,2.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
+id=2 type=1 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=5
+id=3 type=0 status=1 position=(2.00,1.00) velocity=(10.00,0.00) predicted_position=(3.00,1.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
+frame=15 accepted=false
+tracking_target_count=2 lost_target_count=1 armor_target_count=2 spinning_target_count=1
+id=1 type=0 status=1 position=(8.00,2.00) velocity=(5.00,0.00) predicted_position=(8.50,2.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
+id=2 type=1 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=5
+id=3 type=0 status=1 position=(2.00,1.00) velocity=(10.00,0.00) predicted_position=(3.00,1.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
+frame=16 accepted=true
+tracking_target_count=2 lost_target_count=1 armor_target_count=2 spinning_target_count=1
+id=1 type=0 status=1 position=(8.00,2.00) velocity=(5.00,0.00) predicted_position=(9.00,2.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=1
+id=2 type=1 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=5
+id=3 type=0 status=1 position=(2.00,1.00) velocity=(10.00,0.00) predicted_position=(4.00,1.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=1
+frame=17 accepted=true
+tracking_target_count=3 lost_target_count=1 armor_target_count=3 spinning_target_count=1
+id=1 type=0 status=1 position=(9.00,2.00) velocity=(5.00,0.00) predicted_position=(9.50,2.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
+id=2 type=1 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=5
+id=3 type=0 status=1 position=(3.00,1.00) velocity=(5.00,0.00) predicted_position=(3.50,1.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
+id=9 type=0 status=1 position=(4.00,4.00) velocity=(0.00,0.00) predicted_position=(4.00,4.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
+frame=18 accepted=true
+tracking_target_count=3 lost_target_count=1 armor_target_count=3 spinning_target_count=1
+id=1 type=0 status=1 position=(9.00,2.00) velocity=(5.00,0.00) predicted_position=(10.00,2.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=1
+id=2 type=1 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=5
+id=3 type=0 status=1 position=(3.00,1.00) velocity=(5.00,0.00) predicted_position=(4.00,1.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=1
+id=9 type=0 status=1 position=(4.00,4.00) velocity=(0.00,0.00) predicted_position=(4.00,4.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=1
+frame=19 accepted=true
+tracking_target_count=3 lost_target_count=1 armor_target_count=3 spinning_target_count=1
+id=1 type=0 status=1 position=(9.00,2.00) velocity=(5.00,0.00) predicted_position=(10.50,2.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=2
+id=2 type=1 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=5
+id=3 type=0 status=1 position=(3.00,1.00) velocity=(5.00,0.00) predicted_position=(4.50,1.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=2
+id=9 type=0 status=1 position=(4.00,4.00) velocity=(0.00,0.00) predicted_position=(4.00,4.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=2
+frame=20 accepted=true
+tracking_target_count=0 lost_target_count=4 armor_target_count=3 spinning_target_count=1
+id=1 type=0 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=3
+id=2 type=1 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=5
+id=3 type=0 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=3
+id=9 type=0 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=3
+frame=21 accepted=true
+tracking_target_count=1 lost_target_count=3 armor_target_count=3 spinning_target_count=1
+id=1 type=0 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=3
+id=2 type=1 status=1 position=(5.00,0.00) velocity=(0.00,0.00) predicted_position=(5.00,0.00) angle=3.00 angular_velocity=0.00 predicted_angle=3.00 missed=0
+id=3 type=0 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=3
+id=9 type=0 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=3
+frame=22 accepted=true
+tracking_target_count=2 lost_target_count=2 armor_target_count=3 spinning_target_count=1
+id=1 type=0 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=3
+id=2 type=1 status=1 position=(5.00,0.00) velocity=(0.00,0.00) predicted_position=(5.00,0.00) angle=3.00 angular_velocity=0.00 predicted_angle=3.00 missed=1
+id=3 type=0 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=3
+id=9 type=0 status=1 position=(5.00,5.00) velocity=(0.00,0.00) predicted_position=(5.00,5.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
+frame=23 accepted=false
+tracking_target_count=2 lost_target_count=2 armor_target_count=3 spinning_target_count=1
+id=1 type=0 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=3
+id=2 type=1 status=1 position=(5.00,0.00) velocity=(0.00,0.00) predicted_position=(5.00,0.00) angle=3.00 angular_velocity=0.00 predicted_angle=3.00 missed=1
+id=3 type=0 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=3
+id=9 type=0 status=1 position=(5.00,5.00) velocity=(0.00,0.00) predicted_position=(5.00,5.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
+frame=24 accepted=false
+tracking_target_count=2 lost_target_count=2 armor_target_count=3 spinning_target_count=1
+id=1 type=0 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=3
+id=2 type=1 status=1 position=(5.00,0.00) velocity=(0.00,0.00) predicted_position=(5.00,0.00) angle=3.00 angular_velocity=0.00 predicted_angle=3.00 missed=1
+id=3 type=0 status=0 position=(--,--) velocity=(0.00,0.00) predicted_position=(--,--) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=3
+id=9 type=0 status=1 position=(5.00,5.00) velocity=(0.00,0.00) predicted_position=(5.00,5.00) angle=0.00 angular_velocity=0.00 predicted_angle=0.00 missed=0
