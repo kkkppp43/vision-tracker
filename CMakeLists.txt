@@ -3,14 +3,34 @@ cmake_minimum_required(VERSION 3.16)
 project(vision_tracker LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 ## 给 clangd / VSCode IntelliSense 生成 compile_commands.json
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-add_executable(tracker
-  src/main.cpp
+add_library(tracking
+  src/TrackingBase/TrackingBase.cpp
+  src/ArmorTarget/ArmorTarget.cpp
+  src/SpinningTarget/SpinningTarget.cpp
+  src/TargetManager/TargetManager.cpp
+  include/TrackingBase/TrackingBase.hpp
+  include/ArmorTarget/ArmorTarget.hpp
+  include/SpinningTarget/SpinningTarget.hpp
+  include/TargetManager/TargetManager.hpp
   include/data_types.hpp
-  include/test_frames.hpp
 )
+target_include_directories(tracking PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
-target_include_directories(tracker PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/include")
+add_executable(tracker src/main.cpp include/test_frames.hpp)
+target_link_libraries(tracker PRIVATE tracking)
+
+include(CTest)
+if(BUILD_TESTING)
+  add_executable(tracker_tests tests/tracker_tests.cpp)
+  target_link_libraries(tracker_tests PRIVATE tracking)
+  add_test(NAME provided_frames COMMAND tracker_tests provided_frames)
+  add_test(NAME rejection_atomicity COMMAND tracker_tests rejection)
+  add_test(NAME variable_time_and_reacquisition COMMAND tracker_tests variable_time)
+  add_test(NAME empty_first_frame COMMAND tracker_tests empty_first)
+endif()
