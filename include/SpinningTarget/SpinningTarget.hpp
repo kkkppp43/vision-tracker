@@ -2,6 +2,7 @@
 
 #include "TrackingBase/TrackingBase.hpp"
 
+// 旋转装甲：连续 5 帧没看到才算丢失，除了位置还要维护角度。
 class SpinningTarget : public TrackingBase
 {
 public:

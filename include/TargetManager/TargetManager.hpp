@@ -15,9 +15,9 @@ private:
     bool isValidFrame(const rm::InputFrame &frame) const;
     rm::Result makeResult(int frame_id, bool accepted) const;
 
-    // 每个对象只由管理器拥有，unique_ptr 会在管理器销毁时自动释放对象。
+    // 两种装甲都存在这一个 vector 里，用基类指针统一管理。
     std::vector<std::unique_ptr<TrackingBase>> targets_;
-    bool has_successful_frame_ = false;
+    bool has_successful_frame_ = false; // 有没有成功处理过帧，用来放行帧号和时间戳为 0 的第一帧
     int last_frame_id_ = 0;
     std::int64_t last_timestamp_ns_ = 0;
 };

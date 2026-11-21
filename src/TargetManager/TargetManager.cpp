@@ -5,6 +5,7 @@
 
 int TargetManager::findTargetIndex(int id) const
 {
+    // 一个编号一个编号地找，找到就返回它的下标，找不到返回 -1。
     for (std::size_t i = 0; i < targets_.size(); ++i)
     {
         if (targets_[i]->getId() == id)
@@ -12,11 +13,12 @@ int TargetManager::findTargetIndex(int id) const
             return static_cast<int>(i);
         }
     }
-    return -1; // 没找到这个编号。
+    return -1;
 }
 
 bool TargetManager::isValidFrame(const rm::InputFrame &frame) const
 {
+    // 帧号和时间戳都要严格大于上一次成功处理的帧（第一帧除外）。
     if (has_successful_frame_ &&
         (frame.frame_id <= last_frame_id_ || frame.timestamp_ns <= last_timestamp_ns_))
     {
@@ -28,9 +30,9 @@ bool TargetManager::isValidFrame(const rm::InputFrame &frame) const
         const rm::Observation &observation = frame.observations[i];
         if (observation.id < 0)
         {
-            return false;
+            return false; // 目标编号不能是负数
         }
-        // 用基础的双重循环检查同一帧是否存在重复编号。
+        // 同一帧里编号不能出现两次。
         for (std::size_t j = 0; j < i; ++j)
         {
             if (frame.observations[j].id == observation.id)
@@ -38,6 +40,7 @@ bool TargetManager::isValidFrame(const rm::InputFrame &frame) const
                 return false;
             }
         }
+        // 编号第一次出现时类型就定死了，之后不能变。
         int index = findTargetIndex(observation.id);
         if (index != -1 && targets_[index]->getType() != observation.type)
         {
@@ -49,7 +52,8 @@ bool TargetManager::isValidFrame(const rm::InputFrame &frame) const
 
 rm::Result TargetManager::onFrame(const rm::InputFrame &frame)
 {
-    // 第一遍只检查，不创建或更新任何对象，避免非法帧产生部分修改。
+    // 先把整帧完整检查一遍，有问题直接拒绝。
+    // 这样就不会出现"前面几个目标已经改了，后面才发现这帧非法"的情况。
     if (!isValidFrame(frame))
     {
         return makeResult(frame.frame_id, false);
@@ -61,7 +65,7 @@ rm::Result TargetManager::onFrame(const rm::InputFrame &frame)
         dt = (frame.timestamp_ns - last_timestamp_ns_) / 1e9;
     }
 
-    // 全部检查通过后，才创建新目标或更新已存在的目标。
+    // 检查都通过了，才开始处理观测：见过的编号就更新，没见过的就新建。
     for (const rm::Observation &observation : frame.observations)
     {
         int index = findTargetIndex(observation.id);
@@ -79,7 +83,7 @@ rm::Result TargetManager::onFrame(const rm::InputFrame &frame)
         }
     }
 
-    // 每个本帧没出现的目标只记一次漏检，不能用帧号差当作漏检次数。
+    // 这帧没被看到的目标，每个记一次漏检。
     for (const auto &target : targets_)
     {
         bool observed = false;
@@ -97,6 +101,7 @@ rm::Result TargetManager::onFrame(const rm::InputFrame &frame)
         }
     }
 
+    // 全部处理完，这帧才算成功，更新最近成功帧的记录。
     last_frame_id_ = frame.frame_id;
     last_timestamp_ns_ = frame.timestamp_ns;
     has_successful_frame_ = true;
@@ -105,12 +110,14 @@ rm::Result TargetManager::onFrame(const rm::InputFrame &frame)
 
 rm::Result TargetManager::makeResult(int frame_id, bool accepted) const
 {
-    rm::Result result{}; // 四个计数从 0 开始，不能使用未初始化的局部变量。
+    // 统计每次都要从 0 开始，所以这里用花括号初始化。
+    rm::Result result{};
     result.frame_id = frame_id;
     result.accepted = accepted;
 
     for (const auto &target : targets_)
     {
+        // 快照要放一份拷贝进去，同时数一下各种数量。
         rm::TargetSnapshot snapshot = target->getSnapshot();
         result.targets.push_back(snapshot);
         if (snapshot.status == rm::TargetStatus::TRACK)

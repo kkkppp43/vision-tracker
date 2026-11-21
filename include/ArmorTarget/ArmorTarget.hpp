@@ -2,6 +2,7 @@
 
 #include "TrackingBase/TrackingBase.hpp"
 
+// 普通装甲：连续 3 帧没看到就算丢失，不需要角度相关的东西。
 class ArmorTarget : public TrackingBase
 {
 public:
