@@ -2,7 +2,7 @@
 
 #include "data_types.hpp"
 
-// 两种装甲共有的数据和计算过程放在基类中，避免重复编写。
+// 普通装甲和旋转装甲的公共数据、公共计算都放在这个基类里。
 class TrackingBase
 {
 public:
@@ -17,7 +17,7 @@ public:
     void miss(double dt);
 
 protected:
-    // 共同的流程调用这两个函数，具体规则由派生类提供。
+    // 两个纯虚函数，普通装甲和旋转装甲各自给出自己的规则。
     virtual int lostThreshold() const = 0;
     virtual bool tracksAngle() const = 0;
 
@@ -25,7 +25,7 @@ private:
     void clearMotion();
 
     rm::TargetSnapshot snapshot_{};
-    // 必须单独保存真实观测，尤其不能把推算出的 angle 当作上次观测角度。
+    // 上一次真实看到这个目标时的数据，算速度要用。漏检时推算出来的角度不能写进来。
     rm::Observation last_observation_{};
     std::int64_t last_observation_timestamp_ns_ = 0;
 };
